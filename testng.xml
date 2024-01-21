@@ -22,6 +22,10 @@
         </classes>
     </test>
 
-
+    <test name="Change language to russian">
+        <classes>
+            <class name="study.alevel.tests.loggedout.ChangeLangToRussian"/>
+        </classes>
+    </test>
 
 </suite>
