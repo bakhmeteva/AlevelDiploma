@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import study.alevel.core.BrowserManager;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class BasePage {
@@ -31,5 +33,14 @@ public class BasePage {
             }
         }
         System.out.println("Вкладка с именем " + tabName + " не найдена");
+    }
+
+
+    public List<String> getTextFromElements(List<WebElement> elements) {
+        List<String> textList = new ArrayList<>();
+        for (WebElement element : elements) {
+            textList.add(element.getText());
+        }
+        return textList;
     }
 }

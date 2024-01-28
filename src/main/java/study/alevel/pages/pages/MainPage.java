@@ -7,6 +7,8 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import study.alevel.pages.BasePage;
 
+import java.util.List;
+
 public class MainPage extends BasePage {
 
     private final String loginBtn = ".//a[@data-cy = 'myolx-link']";
@@ -16,7 +18,9 @@ public class MainPage extends BasePage {
 
     private final String ruLangBtn = ".//header//a[@href = '/']";
 
-    private final String addsHeader = "//h2[@data-cy = 'home-categories-title']";
+    private final String addsHeader = ".//h2[@data-cy = 'home-categories-title']";
+
+    private final String categories = ".//div[@data-testid = 'home-categories-menu-row']//span";
 
 
 
@@ -59,6 +63,22 @@ public class MainPage extends BasePage {
      */
     public MainPage changeLangToRus(){
         driver.findElement(By.xpath(ruLangBtn)).click();
+        return this;
+    }
+
+    /**
+     *
+     * проверяет заголово разделов
+     */
+    public MainPage checkCategoriesAmount(int categoriesAmount){
+        List <WebElement> categoriesElements = driver.findElements(By.xpath(categories));
+        Assert.assertEquals(categoriesElements.size(), categoriesAmount, "Amount of categories");
+        return this;
+    }
+
+    public MainPage checkCategoryExist(String categoryName){
+        List <String> categoriesElements = getTextFromElements(driver.findElements(By.xpath(categories)));
+        Assert.assertTrue(categoriesElements.contains(categoryName), "categoryName is exist in list of categories");
         return this;
     }
 

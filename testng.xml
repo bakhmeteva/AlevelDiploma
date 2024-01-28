@@ -20,6 +20,12 @@
         </classes>
     </test>
 
+    <test name="Check all categories">
+        <classes>
+            <class name="study.alevel.tests.loggedout.CategoriesCheck"/>
+        </classes>
+    </test>
+
     <test name="SearchAdd">
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>
