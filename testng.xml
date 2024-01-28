@@ -8,9 +8,15 @@
         </classes>
     </test>
 
-    <test name="Blog">
+    <test name="Blog footer btn ">
         <classes>
             <class name="study.alevel.tests.loggedout.footertests.BlogTest"/>
+        </classes>
+    </test>
+
+    <test name="MobileApps footer btn">
+        <classes>
+            <class name="study.alevel.tests.loggedout.footertests.MobileApps"/>
         </classes>
     </test>
 
@@ -33,5 +39,6 @@
             <class name="study.alevel.tests.loggedout.mainfunc.LoginNegative"/>
         </classes>
     </test>
+
 
 </suite>
