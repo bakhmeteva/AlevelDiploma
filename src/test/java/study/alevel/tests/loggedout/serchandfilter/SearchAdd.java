@@ -1,4 +1,4 @@
-package study.alevel.tests.loggedout;
+package study.alevel.tests.loggedout.serchandfilter;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;

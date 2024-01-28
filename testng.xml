@@ -10,7 +10,7 @@
 
     <test name="Blog">
         <classes>
-            <class name="study.alevel.tests.loggedout.BlogTest"/>
+            <class name="study.alevel.tests.loggedout.footertests.BlogTest"/>
         </classes>
     </test>
 
@@ -18,13 +18,19 @@
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>
         <classes>
-            <class name="study.alevel.tests.loggedout.SearchAdd"/>
+            <class name="study.alevel.tests.loggedout.serchandfilter.SearchAdd"/>
         </classes>
     </test>
 
     <test name="Change language to russian">
         <classes>
-            <class name="study.alevel.tests.loggedout.ChangeLangToRussian"/>
+            <class name="study.alevel.tests.loggedout.mainfunc.ChangeLangToRussian"/>
+        </classes>
+    </test>
+
+    <test name="Login negtive test">
+        <classes>
+            <class name="study.alevel.tests.loggedout.mainfunc.LoginNegative"/>
         </classes>
     </test>
 

@@ -12,6 +12,8 @@ public class MainPage extends BasePage {
     private final String loginBtn = ".//a[@data-cy = 'myolx-link']";
     private final String searchField = ".//input[@id = 'search']";
     private final String blogBtn = ".//a[text() = 'Блог OLX']";
+    private final String mobileApps = ".//a[text() = 'Мобільні додатки']";
+
     private final String ruLangBtn = ".//header//a[@href = '/']";
 
     private final String addsHeader = "//h2[@data-cy = 'home-categories-title']";
@@ -30,6 +32,11 @@ public class MainPage extends BasePage {
 
     public MainPage clickBlog(){
         scrollIntoView(driver.findElement(By.xpath(blogBtn))).click();
+        return this;
+    }
+
+    public MainPage clickMobileApp(){
+        scrollIntoView(driver.findElement(By.xpath(mobileApps))).click();
         return this;
     }
 
