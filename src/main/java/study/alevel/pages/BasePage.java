@@ -8,6 +8,7 @@ import study.alevel.core.BrowserManager;
 import java.util.Set;
 
 public class BasePage {
+    public final String errorImage =  ".//img[@alt='error']";
     public WebDriver driver = BrowserManager.getInstance().getDriver();
 
     public WebElement scrollIntoView(WebElement elementToScroll){
