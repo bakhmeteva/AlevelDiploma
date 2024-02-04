@@ -11,7 +11,7 @@ public class SearchAdd extends BaseTest {
 
     @Parameters({"search", "check"})
     @Test(testName = "Поиск теннисной ракетки")
-    public void blogPageTest(String search, String check){
+    public void searchAddTest(String search, String check){
         new MainPage().searchItem(search);
         new SearchResultPage().checkSearchResults(check);
     }

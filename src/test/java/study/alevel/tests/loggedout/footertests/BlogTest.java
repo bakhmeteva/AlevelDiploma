@@ -11,8 +11,6 @@ public class BlogTest extends BaseTest {
     public void blogPageTest(){
         new MainPage().clickBlog()
                 .goToTab("блог");
-
         new ChangePageFromFooter().checkPageName("БЛОГ");
-
     }
 }
