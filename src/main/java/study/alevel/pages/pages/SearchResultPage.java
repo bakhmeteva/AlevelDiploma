@@ -16,6 +16,11 @@ public class SearchResultPage extends BasePage {
     private final String searchResultsHeads = ".//div[@type = 'list']//h6";
     private final String searchResultsPrices = ".//div[@type = 'list']//p[@data-testid = 'ad-price']";
     private final String currencies = ".//span[contains(@data-testid, 'currency-item')]";
+    private final String filterItem = ".//div[@data-testid = 'listing-filters']//p";
+    private final String rangeFrom = ".//input[@data-testid = 'range-from-input']";
+    private final String rangeTo = ".//input[@data-testid = 'range-to-input']";
+
+
 
 
     /**
@@ -87,6 +92,31 @@ public class SearchResultPage extends BasePage {
         scrollIntoView(categoriesElements.get(categoriesElementsText.indexOf(currency.getSymbol()))).click();
         waiter(2);
         return this;
+    }
+
+    public SearchResultPage inputRangeInFilterByName(String filterField, int fromRange, int toRange, Currencies currency) {
+        List<WebElement> filterItems = driver.findElements(By.xpath(filterItem));
+        List<String> filterNames = getTextFromElements(filterItems);
+        WebElement filterItem = filterItems.get(filterNames.indexOf(filterField))
+                .findElement(By.xpath(".."));
+        scrollIntoView(filterItem);
+        filterItem.findElement(By.xpath(rangeFrom)).sendKeys(String.valueOf(fromRange));
+        filterItem.findElement(By.xpath(rangeTo)).sendKeys(String.valueOf(toRange));
+        selectCurrency(currency);
+        waiter(2);
+        return this;
+    }
+
+    public void checkPriceRange(int fromRange, int toRange){
+        List<Integer> trimmedAndParsedPrices = getPricesString().stream()
+                .map(price -> Integer.parseInt(price.replaceAll("[^0-9]", ""))) // Оставляем только числа и преобразуем к int
+                .collect(Collectors.toList());
+
+        boolean isPriceInRange;
+        for (Integer price : trimmedAndParsedPrices) {
+            isPriceInRange = price >= fromRange && price <= toRange;
+            Assert.assertTrue(isPriceInRange, price + " price is in range [" + fromRange + "|" + toRange + "]");
+        }
     }
 
 }

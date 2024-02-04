@@ -2,11 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test suite">
 
-    <test name="Login">
-        <classes>
-            <class name="study.alevel.tests.loggedin.LoginUser"/>
-        </classes>
-    </test>
+
 
     <test name="Blog footer btn ">
         <classes>
@@ -46,6 +42,12 @@
         </classes>
     </test>
 
+    <test name="PriceFilter">
+        <classes>
+            <class name="study.alevel.tests.loggedout.serchandfilter.PriceFilterTest"/>
+        </classes>
+    </test>
+
     <test name="Change language to russian">
         <classes>
             <class name="study.alevel.tests.loggedout.mainfunc.ChangeLangToRussian"/>
@@ -55,6 +57,12 @@
     <test name="Login negative test">
         <classes>
             <class name="study.alevel.tests.loggedout.mainfunc.LoginNegative"/>
+        </classes>
+    </test>
+
+    <test name="Login">
+        <classes>
+            <class name="study.alevel.tests.loggedin.LoginUser"/>
         </classes>
     </test>
 

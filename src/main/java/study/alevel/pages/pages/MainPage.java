@@ -101,5 +101,6 @@ public class MainPage extends BasePage {
                 categoriesElements.get(categoriesElementsText.indexOf(subCategoryName))
                         .findElement(By.xpath("..")))
                 .click();
+        waiter(2);
     }
 }
