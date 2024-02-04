@@ -76,9 +76,10 @@ public class MainPage extends BasePage {
         return this;
     }
 
-    public MainPage checkCategoryExist(String categoryName){
+    public MainPage checkCategoryExist(String... categoryNames){
         List <String> categoriesElements = getTextFromElements(driver.findElements(By.xpath(categories)));
-        Assert.assertTrue(categoriesElements.contains(categoryName), "categoryName is exist in list of categories");
+        for (String categoryName: categoryNames){
+            Assert.assertTrue(categoriesElements.contains(categoryName), categoryName  + " is exist in list of categories");}
         return this;
     }
 
