@@ -15,7 +15,7 @@ public class BaseTest {
         BrowserManager.getInstance().closeDriver();
     }
 
-    @BeforeClass
+    @BeforeMethod
     public void gotoBasePage(){
         BrowserManager.getInstance().open();
     }

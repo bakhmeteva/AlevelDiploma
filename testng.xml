@@ -26,6 +26,12 @@
         </classes>
     </test>
 
+    <test name="Check free category">
+        <classes>
+            <class name="study.alevel.tests.loggedout.serchandfilter.FreeCategory"/>
+        </classes>
+    </test>
+
     <test name="SearchAdd">
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>
@@ -40,7 +46,7 @@
         </classes>
     </test>
 
-    <test name="Login negtive test">
+    <test name="Login negative test">
         <classes>
             <class name="study.alevel.tests.loggedout.mainfunc.LoginNegative"/>
         </classes>
