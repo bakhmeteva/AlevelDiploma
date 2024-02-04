@@ -8,7 +8,7 @@ import study.alevel.pages.pages.MainPage;
 public class BlogTest extends BaseTest {
 
     @Test
-    public void blogPageTest(){
+    public void blogPage(){
         new MainPage().clickBlog()
                 .goToTab("блог");
         new ChangePageFromFooter().checkPageName("БЛОГ");
