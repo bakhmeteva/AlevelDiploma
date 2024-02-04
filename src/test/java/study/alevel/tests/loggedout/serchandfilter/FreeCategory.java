@@ -1,0 +1,16 @@
+package study.alevel.tests.loggedout.serchandfilter;
+
+import org.testng.annotations.Test;
+import study.alevel.BaseTest;
+import study.alevel.core.enums.Language;
+import study.alevel.pages.pages.MainPage;
+import study.alevel.pages.pages.SearchResultPage;
+
+public class FreeCategory extends BaseTest {
+
+    @Test
+    public void checkPriceInFreeAdds() {
+        new MainPage().clickCategoryByName("Віддам безкоштовно");
+        new SearchResultPage().checkFreePrices(Language.UA);
+    }
+}

@@ -3,6 +3,7 @@ package study.alevel.pages.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import study.alevel.core.enums.Language;
 import study.alevel.pages.BasePage;
 
 import java.util.Arrays;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 
 public class SearchResultPage extends BasePage {
     private final String searchResultsHeads = ".//div[@type = 'list']//h6";
+    private final String searchResultsPrices = ".//div[@type = 'list']//p[@data-testid = 'ad-price']";
 
 
     /**
@@ -25,6 +27,24 @@ public class SearchResultPage extends BasePage {
                 .toList();
         Assert.assertFalse(headers.isEmpty(), "результаты поиска не пустые");
         checkResultsHasText(headers, checkValues);
+    }
+
+    /**
+     * проверка результатов поиска
+     */
+    public void checkFreePrices(Language lang){
+        String expectedPrice = "безкоштовно";
+        if (lang.equals(Language.RU)){
+            expectedPrice = "бесплатно";
+        }
+        List <String> prices = driver.findElements(By.xpath(searchResultsPrices))
+                .stream()
+                .limit(10) // оставим только первые 10 объявлений
+                .map(element -> element.getText().toLowerCase())
+                .toList();
+        for (String price: prices){
+            Assert.assertEquals(price, expectedPrice, "price in add");
+        }
     }
 
     /**

@@ -83,4 +83,12 @@ public class MainPage extends BasePage {
         return this;
     }
 
+    public void clickCategoryByName(String categoryName) {
+        List <WebElement> categoriesElements = driver.findElements(By.xpath(categories));
+        List <String> categoriesElementsText = getTextFromElements(categoriesElements);
+        scrollIntoView(
+                categoriesElements.get(categoriesElementsText.indexOf(categoryName))
+                .findElement(By.xpath("..")))
+                .click();
+    }
 }
