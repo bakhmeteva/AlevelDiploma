@@ -89,7 +89,8 @@ public class SearchResultPage extends BasePage {
     public SearchResultPage selectCurrency(Currencies currency) {
         List<WebElement> categoriesElements = driver.findElements(By.xpath(currencies));
         List<String> categoriesElementsText = getTextFromElements(categoriesElements);
-        scrollIntoView(categoriesElements.get(categoriesElementsText.indexOf(currency.getSymbol()))).click();
+        scrollIntoView(driver.findElements(By.xpath(filterItem)).get(0)); //Cкролим до панели фильтров
+        categoriesElements.get(categoriesElementsText.indexOf(currency.getSymbol())).click();
         waiter(2);
         return this;
     }
