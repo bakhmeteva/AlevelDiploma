@@ -1,9 +1,8 @@
-package study.alevel.tests.loggedout.serchandfilter;
+package study.alevel.tests.serchandfilter;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import study.alevel.BaseTest;
-import study.alevel.pages.pages.ChangePageFromFooter;
 import study.alevel.pages.pages.MainPage;
 import study.alevel.pages.pages.SearchResultPage;
 

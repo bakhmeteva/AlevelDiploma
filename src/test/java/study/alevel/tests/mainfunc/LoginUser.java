@@ -1,6 +1,5 @@
-package study.alevel.tests.loggedin;
+package study.alevel.tests.mainfunc;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import study.alevel.BaseTest;
 import study.alevel.pages.pages.AccountPage;

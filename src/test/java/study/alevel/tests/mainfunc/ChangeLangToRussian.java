@@ -1,4 +1,4 @@
-package study.alevel.tests.loggedout.mainfunc;
+package study.alevel.tests.mainfunc;
 
 import org.testng.annotations.Test;
 import study.alevel.BaseTest;

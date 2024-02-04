@@ -90,6 +90,7 @@ public class SearchResultPage extends BasePage {
         List<WebElement> categoriesElements = driver.findElements(By.xpath(currencies));
         List<String> categoriesElementsText = getTextFromElements(categoriesElements);
         scrollIntoView(driver.findElements(By.xpath(filterItem)).get(0)); //Cкролим до панели фильтров
+        waiter(1);
         categoriesElements.get(categoriesElementsText.indexOf(currency.getSymbol())).click();
         waiter(2);
         return this;

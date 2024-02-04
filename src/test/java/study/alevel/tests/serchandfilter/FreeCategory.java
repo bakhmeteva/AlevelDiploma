@@ -1,4 +1,4 @@
-package study.alevel.tests.loggedout.serchandfilter;
+package study.alevel.tests.serchandfilter;
 
 import org.testng.annotations.Test;
 import study.alevel.BaseTest;

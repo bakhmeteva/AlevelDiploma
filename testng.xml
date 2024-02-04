@@ -3,31 +3,31 @@
 <suite name="Test suite">
     <test name="Blog footer btn ">
         <classes>
-            <class name="study.alevel.tests.loggedout.footertests.BlogTest"/>
+            <class name="study.alevel.tests.footertests.BlogTest"/>
         </classes>
     </test>
 
     <test name="MobileApps footer btn">
         <classes>
-            <class name="study.alevel.tests.loggedout.footertests.MobileApps"/>
+            <class name="study.alevel.tests.footertests.MobileApps"/>
         </classes>
     </test>
 
     <test name="Check all categories">
         <classes>
-            <class name="study.alevel.tests.loggedout.CategoriesCheck"/>
+            <class name="study.alevel.tests.mainfunc.CategoriesCheck"/>
         </classes>
     </test>
 
     <test name="Check free category">
         <classes>
-            <class name="study.alevel.tests.loggedout.serchandfilter.FreeCategory"/>
+            <class name="study.alevel.tests.serchandfilter.FreeCategory"/>
         </classes>
     </test>
 
     <test name="Check currency">
         <classes>
-            <class name="study.alevel.tests.loggedout.serchandfilter.CurrencyChange"/>
+            <class name="study.alevel.tests.serchandfilter.CurrencyChange"/>
         </classes>
     </test>
 
@@ -35,31 +35,31 @@
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>
         <classes>
-            <class name="study.alevel.tests.loggedout.serchandfilter.SearchAdd"/>
+            <class name="study.alevel.tests.serchandfilter.SearchAdd"/>
         </classes>
     </test>
 
     <test name="PriceFilter">
         <classes>
-            <class name="study.alevel.tests.loggedout.serchandfilter.PriceFilterTest"/>
+            <class name="study.alevel.tests.serchandfilter.PriceFilterTest"/>
         </classes>
     </test>
 
     <test name="Change language to russian">
         <classes>
-            <class name="study.alevel.tests.loggedout.mainfunc.ChangeLangToRussian"/>
+            <class name="study.alevel.tests.mainfunc.ChangeLangToRussian"/>
         </classes>
     </test>
 
     <test name="Login negative test">
         <classes>
-            <class name="study.alevel.tests.loggedout.mainfunc.LoginNegative"/>
+            <class name="study.alevel.tests.mainfunc.LoginNegative"/>
         </classes>
     </test>
 
     <test name="Login">
         <classes>
-            <class name="study.alevel.tests.loggedin.LoginUser"/>
+            <class name="study.alevel.tests.mainfunc.LoginUser"/>
         </classes>
     </test>
 

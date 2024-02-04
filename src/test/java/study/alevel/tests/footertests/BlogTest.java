@@ -1,4 +1,4 @@
-package study.alevel.tests.loggedout.footertests;
+package study.alevel.tests.footertests;
 
 import org.testng.annotations.Test;
 import study.alevel.BaseTest;
