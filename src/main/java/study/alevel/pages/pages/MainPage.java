@@ -21,6 +21,7 @@ public class MainPage extends BasePage {
     private final String addsHeader = ".//h2[@data-cy = 'home-categories-title']";
 
     private final String categories = ".//div[@data-testid = 'home-categories-menu-row']//span";
+    private final String subCategories = ".//div[contains(@data-testid, 'sub-cat')]//span";
 
 
 
@@ -83,12 +84,22 @@ public class MainPage extends BasePage {
         return this;
     }
 
-    public void clickCategoryByName(String categoryName) {
+    public MainPage clickCategoryByName(String categoryName) {
         List <WebElement> categoriesElements = driver.findElements(By.xpath(categories));
         List <String> categoriesElementsText = getTextFromElements(categoriesElements);
         scrollIntoView(
                 categoriesElements.get(categoriesElementsText.indexOf(categoryName))
                 .findElement(By.xpath("..")))
+                .click();
+        return this;
+    }
+
+    public void clickSubCategoryByName(String subCategoryName) {
+        List <WebElement> categoriesElements = driver.findElements(By.xpath(subCategories));
+        List <String> categoriesElementsText = getTextFromElements(categoriesElements);
+        scrollIntoView(
+                categoriesElements.get(categoriesElementsText.indexOf(subCategoryName))
+                        .findElement(By.xpath("..")))
                 .click();
     }
 }

@@ -32,6 +32,12 @@
         </classes>
     </test>
 
+    <test name="Check currency">
+        <classes>
+            <class name="study.alevel.tests.loggedout.serchandfilter.CurrencyChange"/>
+        </classes>
+    </test>
+
     <test name="SearchAdd">
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>

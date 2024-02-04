@@ -43,4 +43,12 @@ public class BasePage {
         }
         return textList;
     }
+
+    public static void waiter(int seconds){
+        try {
+            Thread.sleep(1000L * seconds);
+        } catch (InterruptedException e) {
+            System.out.println("Something went wrong while wait " + e.getMessage());
+        }
+    }
 }
