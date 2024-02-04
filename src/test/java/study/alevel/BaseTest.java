@@ -16,7 +16,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void gotoBasePage(){
+    public void goToBasePage(){
         BrowserManager.getInstance().open();
     }
 
