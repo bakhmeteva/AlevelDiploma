@@ -1,12 +1,14 @@
 package study.alevel.pages.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import study.alevel.core.enums.Currencies;
 import study.alevel.core.enums.Language;
 import study.alevel.pages.BasePage;
 
+import java.security.Key;
 import java.util.Arrays;
 import java.util.Currency;
 import java.util.List;
@@ -105,7 +107,7 @@ public class SearchResultPage extends BasePage {
         scrollIntoViewMiddle(filterItem);
         filterItem.findElement(By.xpath(rangeFrom)).sendKeys(String.valueOf(fromRange));
         filterItem.findElement(By.xpath(rangeTo)).sendKeys(String.valueOf(toRange));
-        selectCurrency(currency);
+        filterItem.findElement(By.xpath(rangeTo)).sendKeys(Keys.TAB);
         waiter(2);
         return this;
     }
