@@ -102,7 +102,7 @@ public class SearchResultPage extends BasePage {
         List<String> filterNames = getTextFromElements(filterItems);
         WebElement filterItem = filterItems.get(filterNames.indexOf(filterField))
                 .findElement(By.xpath(".."));
-        scrollIntoView(filterItem);
+        scrollIntoViewMiddle(filterItem);
         filterItem.findElement(By.xpath(rangeFrom)).sendKeys(String.valueOf(fromRange));
         filterItem.findElement(By.xpath(rangeTo)).sendKeys(String.valueOf(toRange));
         selectCurrency(currency);

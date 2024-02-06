@@ -16,7 +16,7 @@ public class BasePage {
     public WebElement scrollIntoViewMiddle(WebElement elementToScroll){
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elementToScroll);
-        waiter(0.2);
+        waiter(1);
         return elementToScroll;
     }
 

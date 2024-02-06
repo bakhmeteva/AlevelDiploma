@@ -14,7 +14,7 @@ public class AddsPage extends BasePage {
 
     public AddsPage clickShowPhoneInFooter(){
         waiter(2);
-        scrollIntoView(driver.findElement(By.xpath(showPhoneBtnFooter))).click();
+        scrollIntoViewMiddle(driver.findElement(By.xpath(showPhoneBtnFooter))).click();
         return this;
     }
 
