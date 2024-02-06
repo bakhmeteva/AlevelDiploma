@@ -105,7 +105,7 @@ public class SearchResultPage extends BasePage {
         scrollIntoViewMiddle(filterItem);
         filterItem.findElement(By.xpath(rangeFrom)).sendKeys(String.valueOf(fromRange));
         filterItem.findElement(By.xpath(rangeTo)).sendKeys(String.valueOf(toRange));
-        filterItem.findElement(By.xpath(rangeTo)).sendKeys(Keys.TAB);
+        selectCurrency(currency);
         waiter(2);
         return this;
     }
