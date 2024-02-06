@@ -13,9 +13,16 @@ public class BasePage {
     public final String errorImage =  ".//img[@alt='error']";
     public WebDriver driver = BrowserManager.getInstance().getDriver();
 
-    public WebElement scrollIntoView(WebElement elementToScroll){
+    public WebElement scrollIntoViewMiddle(WebElement elementToScroll){
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
         jsExecutor.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elementToScroll);
+        waiter(0.2);
+        return elementToScroll;
+    }
+
+    public WebElement scrollIntoView(WebElement elementToScroll){
+        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+        jsExecutor.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
         waiter(0.2);
         return elementToScroll;
     }

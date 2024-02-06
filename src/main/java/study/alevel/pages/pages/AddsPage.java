@@ -13,18 +13,20 @@ public class AddsPage extends BasePage {
     private final String phone = ".//a[@data-testid = 'contact-phone']";
 
     public AddsPage clickShowPhoneInFooter(){
+        waiter(2);
         scrollIntoView(driver.findElement(By.xpath(showPhoneBtnFooter))).click();
         return this;
     }
 
     public AddsPage clickShowPhoneOnRight(){
-        scrollIntoView(driver.findElement(By.xpath(showPhoneBtnRight))).click();
+        waiter(2);
+        scrollIntoViewMiddle(driver.findElement(By.xpath(showPhoneBtnRight))).click();
         return this;
     }
 
     public AddsPage clickSendMessage(){
         waiter(2);
-        scrollIntoView(driver.findElement(By.xpath(sendMessage))).click();
+        scrollIntoViewMiddle(driver.findElement(By.xpath(sendMessage))).click();
         return this;
     }
 

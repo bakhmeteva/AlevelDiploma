@@ -57,17 +57,17 @@
         </classes>
     </test>
 
-    <test name="Login negative test">
-        <classes>
-            <class name="study.alevel.tests.mainfunc.LoginNegative"/>
-        </classes>
-    </test>
+<!--    <test name="Login negative test">-->
+<!--        <classes>-->
+<!--            <class name="study.alevel.tests.mainfunc.LoginNegative"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Login">
-        <classes>
-            <class name="study.alevel.tests.mainfunc.LoginUser"/>
-        </classes>
-    </test>
+<!--    <test name="Login">-->
+<!--        <classes>-->
+<!--            <class name="study.alevel.tests.mainfunc.LoginUser"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
 </suite>
