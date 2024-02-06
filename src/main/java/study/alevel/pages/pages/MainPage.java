@@ -22,6 +22,9 @@ public class MainPage extends BasePage {
 
     private final String categories = ".//div[@data-testid = 'home-categories-menu-row']//span";
     private final String subCategories = ".//div[contains(@data-testid, 'sub-cat')]//span";
+    private final String allAdds = ".//a[contains(@href, 'obyavlenie')]";
+
+
 
 
 
@@ -101,6 +104,11 @@ public class MainPage extends BasePage {
                 categoriesElements.get(categoriesElementsText.indexOf(subCategoryName))
                         .findElement(By.xpath("..")))
                 .click();
+        waiter(2);
+    }
+
+    public void clickFirstAdd(){
+        scrollIntoView(driver.findElements(By.xpath(allAdds)).get(0)).click();
         waiter(2);
     }
 }

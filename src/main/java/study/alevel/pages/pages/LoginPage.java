@@ -37,4 +37,9 @@ public class LoginPage extends BasePage {
         return this;
     }
 
+    public LoginPage checkPageShown(){
+        Assert.assertTrue(driver.findElement(By.xpath(emailField)).isDisplayed(), " login page is shown");
+        return this;
+    }
+
 }

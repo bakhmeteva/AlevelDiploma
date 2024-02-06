@@ -45,6 +45,12 @@
         </classes>
     </test>
 
+    <test name="Contact Information in add">
+        <classes>
+            <class name="study.alevel.tests.adds.LoggedOutActionsWithAdd"/>
+        </classes>
+    </test>
+
     <test name="Change language to russian">
         <classes>
             <class name="study.alevel.tests.mainfunc.ChangeLangToRussian"/>

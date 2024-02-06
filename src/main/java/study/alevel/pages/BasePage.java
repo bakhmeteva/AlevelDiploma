@@ -15,7 +15,8 @@ public class BasePage {
 
     public WebElement scrollIntoView(WebElement elementToScroll){
         JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-        jsExecutor.executeScript("arguments[0].scrollIntoView(true);", elementToScroll);
+        jsExecutor.executeScript("arguments[0].scrollIntoView({behavior: 'smooth', block: 'center'});", elementToScroll);
+        waiter(0.2);
         return elementToScroll;
     }
 
@@ -44,9 +45,9 @@ public class BasePage {
         return textList;
     }
 
-    public static void waiter(int seconds){
+    public static void waiter(double seconds){
         try {
-            Thread.sleep(1000L * seconds);
+            Thread.sleep((long) (1000L * seconds));
         } catch (InterruptedException e) {
             System.out.println("Something went wrong while wait " + e.getMessage());
         }
