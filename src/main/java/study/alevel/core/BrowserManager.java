@@ -36,7 +36,7 @@ public class BrowserManager {
         return instance;
     }
 
-    public WebDriver getDriver() {
+    public static WebDriver getDriver() {
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized. Call initDriver() first.");
         }
