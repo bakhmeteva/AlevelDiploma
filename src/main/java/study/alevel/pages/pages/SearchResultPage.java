@@ -110,6 +110,18 @@ public class SearchResultPage extends BasePage {
         return this;
     }
 
+
+    public SearchResultPage checkRangeInFilterByName(String filterField, int fromRange, int toRange) {
+        List<WebElement> filterItems = driver.findElements(By.xpath(filterItem));
+        List<String> filterNames = getTextFromElements(filterItems);
+        WebElement filterItem = filterItems.get(filterNames.indexOf(filterField))
+                .findElement(By.xpath(".."));
+        scrollIntoViewMiddle(filterItem);
+        Assert.assertEquals(Integer.parseInt(filterItem.findElement(By.xpath(rangeFrom)).getAttribute("value")), fromRange, filterField + " from");
+        Assert.assertEquals(Integer.parseInt(filterItem.findElement(By.xpath(rangeTo)).getAttribute("value")), toRange, filterField + " to");
+        return this;
+    }
+
     public void checkPriceRange(int fromRange, int toRange){
         List<Integer> trimmedAndParsedPrices = getPricesString().stream()
                 .map(price -> Integer.parseInt(price.replaceAll("[^0-9]", ""))) // Оставляем только числа и преобразуем к int

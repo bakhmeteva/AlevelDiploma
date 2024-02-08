@@ -25,6 +25,7 @@ public class PriceFilterTest extends BaseTest {
         int fromPrice = 20000;
         int toPrice = 10000;
         new SearchResultPage().inputRangeInFilterByName("Ціна", fromPrice, toPrice, Currencies.UAH)
+                .checkRangeInFilterByName("Ціна", toPrice, fromPrice)
                 .checkPriceRange(toPrice, fromPrice);
     }
 
