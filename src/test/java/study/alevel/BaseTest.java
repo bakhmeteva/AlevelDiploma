@@ -23,12 +23,4 @@ public class BaseTest {
         BrowserManager.getInstance().open();
     }
 
-    @AfterMethod
-    public void tearDown(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            // Сделать скриншот и сохранить его
-            ((TakesScreenshot) BrowserManager.getDriver()).getScreenshotAs(OutputType.BYTES);
-        }
-    }
-
 }
