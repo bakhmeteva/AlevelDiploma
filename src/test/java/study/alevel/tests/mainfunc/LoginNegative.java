@@ -16,4 +16,11 @@ public class LoginNegative extends BaseTest {
         new LoginPage().login("SomeUser@gmail.com", "somePassword")
                 .checkFailLoginMessage(message);
     }
+
+    @Test
+    public void loginUserNegativeWithExistingEmail(){
+        new MainPage().clickLogin();
+        new LoginPage().login("squirrel2020@ukr.net", "somePassword")
+                .checkFailLoginMessage("Невірний логін або пароль");
+    }
 }
