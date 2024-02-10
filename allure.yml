@@ -1,0 +1,5 @@
+allure:
+  # Путь к папке для хранения вложений
+  attachments:
+    use-digest-for-path: false
+    directory: target/allure-results
