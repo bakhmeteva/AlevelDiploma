@@ -1,5 +1,6 @@
 package study.alevel;
 
+import io.qameta.allure.Allure;
 import io.qameta.allure.Attachment;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -9,6 +10,7 @@ import org.testng.Reporter;
 import org.testng.annotations.*;
 import study.alevel.core.BrowserManager;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
 import java.io.IOException;
 
@@ -37,21 +39,15 @@ public class BaseTest {
         }
     }
 
-    public void captureScreenshot(ITestResult result) {
-        // Преобразование драйвера в объект TakesScreenshot
-        TakesScreenshot ts = (TakesScreenshot) BrowserManager.getDriver();
-        // Получение скриншота как файла
-        File screenshot = ts.getScreenshotAs(OutputType.FILE);
-        // Путь для сохранения скриншота
-        String path = "./screenshots/" + result.getName() + ".png";
-        // Создание файла скриншота
-        File destination = new File(path);
+    private void captureScreenshot() {
         try {
-            // Копирование скриншота в нужное место
-            FileUtils.copyFile(screenshot, destination);
-            // Добавление скриншота к отчету TestNG
-            Reporter.log("Failed test screenshot: <a href='" + path + "'><img src='" + path + "'/></a>");
-        } catch (IOException e) {
+            // Преобразование драйвера в объект TakesScreenshot
+            TakesScreenshot ts = (TakesScreenshot) BrowserManager.getDriver();
+            // Получение скриншота как массива байт
+            byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
+            // Добавление скриншота к отчету Allure
+            Allure.addAttachment("Page screenshot", new ByteArrayInputStream(screenshot));
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
