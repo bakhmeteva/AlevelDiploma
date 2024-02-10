@@ -2,3 +2,4 @@ allure:
   # Путь к папке для хранения вложений
   attachments:
      directory: allure-results
+     type: image/png
