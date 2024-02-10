@@ -7,8 +7,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 import study.alevel.core.BrowserManager;
 
-import static study.alevel.core.BrowserManager.driver;
-
 public class BaseTest {
 
     @BeforeTest
