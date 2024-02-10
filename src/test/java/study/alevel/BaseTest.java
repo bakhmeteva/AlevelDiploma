@@ -35,7 +35,7 @@ public class BaseTest {
     public void tearDown(ITestResult result) {
         if (result.getStatus() == ITestResult.FAILURE) {
             // Сделать скриншот и сохранить его
-            captureScreenshot(result);
+            captureScreenshot();
         }
     }
 
