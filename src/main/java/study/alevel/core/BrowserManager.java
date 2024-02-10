@@ -24,6 +24,7 @@ public class BrowserManager {
             capabilities.setCapability("pageLoadStrategy", "slow");
             driver = new ChromeDriver(options);
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
         } else {
             throw new IllegalStateException("Driver is already initialized");
         }
