@@ -22,9 +22,11 @@ public class CurrencyChange extends BaseTest {
 
     @Test(dataProvider = "currency")
     public void checkChangeCurrency(Currencies currency){
-        new MainPage().clickCategoryByName("Авто")
+        new MainPage().
+                clickCategoryByName("Авто")
                 .clickSubCategoryByName("Легкові автомобілі");
-        new SearchResultPage().selectCurrency(currency)
+        new SearchResultPage()
+                .selectCurrency(currency)
                 .checkPricesContains(currency.getSymbol());
     }
 }

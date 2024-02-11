@@ -9,8 +9,10 @@ public class BlogTest extends BaseTest {
 
     @Test
     public void blogPage(){
-        new MainPage().clickBlog()
+        new MainPage()
+                .clickBlog()
                 .goToTab("блог");
-        new ChangeFromFooterPage().checkPageName("БЛОГ");
+        new ChangeFromFooterPage()
+                .checkPageName("БЛОГ");
     }
 }

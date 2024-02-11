@@ -10,13 +10,18 @@ public class FreeCategory extends BaseTest {
 
     @Test
     public void checkPriceInFreeAdds() {
-        new MainPage().clickCategoryByName("Віддам безкоштовно");
-        new SearchResultPage().checkFreePrices(Language.UA);
+        new MainPage()
+                .clickCategoryByName("Віддам безкоштовно");
+        new SearchResultPage()
+                .checkFreePrices(Language.UA);
     }
 
     @Test
     public void checkPriceInFreeAddsRu() {
-        new MainPage().changeLangToRus().clickCategoryByName("Отдам даром");
-        new SearchResultPage().checkFreePrices(Language.RU);
+        new MainPage()
+                .changeLangToRus()
+                .clickCategoryByName("Отдам даром");
+        new SearchResultPage()
+                .checkFreePrices(Language.RU);
     }
 }

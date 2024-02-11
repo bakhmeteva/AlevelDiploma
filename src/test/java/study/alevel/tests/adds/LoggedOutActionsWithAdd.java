@@ -19,11 +19,15 @@ public class LoggedOutActionsWithAdd extends BaseTest {
     @Test
     public void tryToSeePhoneRight() {
         new MainPage().clickFirstAdd();
-        new AddsPage().clickShowPhoneOnRight().checkPhoneVisible();
+        new AddsPage()
+                .clickShowPhoneOnRight()
+                .checkPhoneVisible();
     }
     @Test
     public void tryToSeePhoneInFooter() {
         new MainPage().clickFirstAdd();
-        new AddsPage().clickShowPhoneInFooter().checkPhoneVisible();
+        new AddsPage()
+                .clickShowPhoneInFooter()
+                .checkPhoneVisible();
     }
 }

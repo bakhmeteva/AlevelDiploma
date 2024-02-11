@@ -8,7 +8,8 @@ public class ChangeLangToRussian extends BaseTest {
 
     @Test
     public void changeLangToRusTest(){
-        new MainPage().checkMainCategoriesHead("Розділи на сервісі OLX")
+        new MainPage()
+                .checkMainCategoriesHead("Розділи на сервісі OLX")
                 .changeLangToRus()
                 .checkMainCategoriesHead("Разделы на сервисе OLX");
     }
