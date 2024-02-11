@@ -31,25 +31,5 @@ public class BaseTest {
         BrowserManager.getInstance().open();
     }
 
-    @AfterMethod
-    public void tearDown(ITestResult result) {
-        if (result.getStatus() == ITestResult.FAILURE) {
-            // Сделать скриншот и сохранить его
-            captureScreenshot();
-        }
-    }
-
-    private void captureScreenshot() {
-        try {
-            // Преобразование драйвера в объект TakesScreenshot
-            TakesScreenshot ts = (TakesScreenshot) BrowserManager.getDriver();
-            // Получение скриншота как массива байт
-            byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
-            // Добавление скриншота к отчету Allure
-            Allure.addAttachment("Page screenshot", new ByteArrayInputStream(screenshot));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
 }
