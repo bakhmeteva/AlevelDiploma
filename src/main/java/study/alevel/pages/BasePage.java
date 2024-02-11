@@ -52,7 +52,7 @@ public class BasePage {
         return textList;
     }
 
-    public static void waiter(double seconds){
+    public void waiter(double seconds){
         try {
             Thread.sleep((long) (1000L * seconds));
         } catch (InterruptedException e) {
