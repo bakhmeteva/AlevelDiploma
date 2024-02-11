@@ -32,11 +32,6 @@ public class MainPage extends BasePage {
         driver.findElement(By.xpath(loginBtn)).click();
     }
 
-    public void showAccMenus(){
-        Actions actions = new Actions(driver);
-        actions.moveToElement(driver.findElement(By.xpath(loginBtn))).perform();
-    }
-
 
     public MainPage clickBlog(){
         scrollIntoView(driver.findElement(By.xpath(blogBtn))).click();
