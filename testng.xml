@@ -25,7 +25,7 @@
         </classes>
     </test>
 
-    <test name="5 - Check currency">
+    <test name="5 - Check currency change">
         <classes>
             <class name="study.alevel.tests.serchandfilter.CurrencyChange"/>
         </classes>
