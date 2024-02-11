@@ -4,8 +4,6 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import study.alevel.pages.BasePage;
 
-import static java.lang.Thread.sleep;
-
 public class LoginPage extends BasePage {
 
     private final String email = "squirrel2020@ukr.net";
@@ -27,13 +25,9 @@ public class LoginPage extends BasePage {
     }
 
     public LoginPage checkFailLoginMessage(String message){
-        try {
         driver.findElement(By.xpath(errorImage)).isDisplayed();
-        sleep(500);
+        waiter(0.5);
         Assert.assertEquals(driver.findElement(By.xpath(failMessage)).getText(), message, "Login error message");
-        } catch (InterruptedException e) {
-            System.out.println(e.getMessage());
-        }
         return this;
     }
 
