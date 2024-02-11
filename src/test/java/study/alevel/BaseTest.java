@@ -8,7 +8,7 @@ import study.alevel.core.BrowserManager;
 public class BaseTest {
 
     @BeforeTest
-    public void beforeSuiteMethod(){
+    public void beforeTest(){
         BrowserManager.initDriver();
     }
 
