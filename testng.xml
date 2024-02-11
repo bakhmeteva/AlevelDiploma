@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test suite">
-    <test name="Blog footer btn ">
+    <test name="1 - Blog footer btn ">
         <classes>
             <class name="study.alevel.tests.footertests.BlogTest"/>
         </classes>
     </test>
 
-    <test name="MobileApps footer btn">
+    <test name="2 - MobileApps footer btn">
         <classes>
             <class name="study.alevel.tests.footertests.MobileApps"/>
         </classes>
     </test>
 
-    <test name="Check all categories">
+    <test name="3 - Check all categories">
         <classes>
             <class name="study.alevel.tests.mainfunc.CategoriesCheck"/>
         </classes>
     </test>
 
-    <test name="Check free category">
+    <test name="4 - Check free category">
         <classes>
             <class name="study.alevel.tests.serchandfilter.FreeCategory"/>
         </classes>
     </test>
 
-    <test name="Check currency">
+    <test name="5 - Check currency">
         <classes>
             <class name="study.alevel.tests.serchandfilter.CurrencyChange"/>
         </classes>
     </test>
 
-    <test name="SearchAdd">
+    <test name="6 - SearchAdd">
         <parameter name="search" value="Тенісна ракетка"/>
         <parameter name="check" value="теніс,ракетка,теннис"/>
         <classes>
@@ -39,31 +39,31 @@
         </classes>
     </test>
 
-    <test name="PriceFilter">
+    <test name="7 - PriceFilter">
         <classes>
             <class name="study.alevel.tests.serchandfilter.PriceFilterTest"/>
         </classes>
     </test>
 
-    <test name="Contact Information in add">
+    <test name="8 - Contact Information in add">
         <classes>
             <class name="study.alevel.tests.adds.LoggedOutActionsWithAdd"/>
         </classes>
     </test>
 
-    <test name="Change language to russian">
+    <test name="9 - Change language to russian">
         <classes>
             <class name="study.alevel.tests.mainfunc.ChangeLangToRussian"/>
         </classes>
     </test>
 
-    <test name="Login">
+    <test name="10 - Login">
         <classes>
             <class name="study.alevel.tests.mainfunc.LoginUser"/>
         </classes>
     </test>
 
-    <test name="Login negative test">
+    <test name="11 - Login negative test">
         <classes>
             <class name="study.alevel.tests.mainfunc.LoginNegative"/>
         </classes>
