@@ -32,7 +32,7 @@ public class BrowserManager {
 
     public static BrowserManager getInstance() {
         if (instance == null) {
-            instance = new BrowserManager();
+            System.out.println("instance is not initialized");;
         }
         return instance;
     }
